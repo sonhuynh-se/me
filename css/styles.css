@@ -1,0 +1,182 @@
+:root {
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Custom UI Components */
+.nav-link { font-weight: 600; cursor: pointer; }
+
+.hero-section {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0) 100%);
+}
+
+.section-title {
+    font-weight: 800;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    width: 60%;
+    height: 4px;
+    background: var(--bs-primary);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
+}
+
+/* Skills Tags */
+.skill-badge {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: var(--bs-body-tertiary);
+    border: 1px solid var(--bs-border-color);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.skill-badge:hover {
+    background: var(--bs-primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Timeline Style */
+.timeline {
+    border-left: 3px solid var(--bs-primary);
+    padding-left: 30px;
+    margin-left: 15px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: var(--bs-primary);
+    border: 4px solid var(--bs-body-bg);
+    border-radius: 50%;
+    position: absolute;
+    left: -40px;
+    top: 5px;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+}
+
+/* Project Cards */
+.project-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Certificate Slider Styles */
+.cert-slider-card {
+    max-width: 950px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--bs-body-tertiary);
+    border: 1px solid var(--bs-border-color);
+    transition: all 0.3s ease;
+}
+
+.cert-iframe-container {
+    width: 100%;
+    height: 450px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--bs-border-color);
+}
+
+/* Tabs Styling */
+.nav-pills .nav-link {
+    padding: 12px 30px;
+    border-radius: 50px;
+    color: var(--bs-secondary);
+    font-weight: 700;
+    border: 1px solid transparent;
+}
+.nav-pills .nav-link.active {
+    background-color: var(--bs-primary-subtle);
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--bs-primary);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(1) grayscale(100);
+    background-size: 50%;
+}
+[data-bs-theme="dark"] .carousel-control-prev-icon,
+[data-bs-theme="dark"] .carousel-control-next-icon {
+    filter: invert(0);
+}
+
+/* Floating Theme Toggle */
+.theme-toggle-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--bs-border-color);
+    background: var(--bs-body-bg);
+}
+
+/* Social Contact Cards */
+.social-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: var(--bs-body-tertiary);
+    border: 1px solid var(--bs-border-color);
+    transition: all 0.3s ease;
+}
+.social-card:hover {
+    background: var(--bs-primary);
+    color: white !important;
+    transform: translateY(-5px);
+    border-color: var(--bs-primary);
+}
+.social-icon {
+    font-size: 2rem;
+    margin-right: 1.25rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .hero-section { padding: 60px 0; text-align: center; }
+    .section-title { margin-bottom: 2rem; }
+    .timeline { margin-left: 10px; }
+    .cert-slider-card { padding: 1rem !important; }
+    .cert-iframe-container { height: 300px; }
+}

@@ -3,198 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Stack Engineer Portfolio</title>
+    <title>Son Huynh - Full Stack Engineer</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <style>
-        :root {
-            --transition-speed: 0.3s;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            transition: background-color var(--transition-speed), color var(--transition-speed);
-        }
-
-        /* Custom UI Components */
-        .nav-link { font-weight: 600; cursor: pointer; }
-        
-        .hero-section {
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0) 100%);
-        }
-
-        .section-title {
-            font-weight: 800;
-            margin-bottom: 3rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 60%;
-            height: 4px;
-            background: var(--bs-primary);
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            border-radius: 2px;
-        }
-
-        /* Skills Tags */
-        .skill-badge {
-            padding: 10px 20px;
-            border-radius: 50px;
-            background: var(--bs-body-tertiary);
-            border: 1px solid var(--bs-border-color);
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .skill-badge:hover {
-            background: var(--bs-primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* Timeline Style */
-        .timeline {
-            border-left: 3px solid var(--bs-primary);
-            padding-left: 30px;
-            margin-left: 15px;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 40px;
-        }
-
-        .timeline-item::before {
-            content: "";
-            width: 16px;
-            height: 16px;
-            background: var(--bs-primary);
-            border: 4px solid var(--bs-body-bg);
-            border-radius: 50%;
-            position: absolute;
-            left: -40px;
-            top: 5px;
-            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
-        }
-
-        /* Project Cards */
-        .project-card {
-            border: none;
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Certificate Slider Styles */
-        .cert-slider-card {
-            max-width: 950px;
-            margin: 0 auto;
-            border-radius: 24px;
-            overflow: hidden;
-            background: var(--bs-body-tertiary);
-            border: 1px solid var(--bs-border-color);
-            transition: all 0.3s ease;
-        }
-
-        .cert-iframe-container {
-            width: 100%;
-            height: 450px;
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--bs-border-color);
-        }
-
-        /* Tabs Styling */
-        .nav-pills .nav-link {
-            padding: 12px 30px;
-            border-radius: 50px;
-            color: var(--bs-secondary);
-            font-weight: 700;
-            border: 1px solid transparent;
-        }
-        .nav-pills .nav-link.active {
-            background-color: var(--bs-primary-subtle);
-            color: var(--bs-primary);
-            border-color: var(--bs-primary);
-        }
-
-        .carousel-indicators [data-bs-target] {
-            background-color: var(--bs-primary);
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-        }
-
-        .carousel-control-prev-icon, .carousel-control-next-icon {
-            filter: invert(1) grayscale(100);
-            background-size: 50%;
-        }
-        [data-bs-theme="dark"] .carousel-control-prev-icon,
-        [data-bs-theme="dark"] .carousel-control-next-icon {
-            filter: invert(0);
-        }
-
-        /* Floating Theme Toggle */
-        .theme-toggle-btn {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: 1px solid var(--bs-border-color);
-            background: var(--bs-body-bg);
-        }
-
-        /* Social Contact Cards */
-        .social-card {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            align-items: center;
-            padding: 1.5rem;
-            border-radius: 16px;
-            background: var(--bs-body-tertiary);
-            border: 1px solid var(--bs-border-color);
-            transition: all 0.3s ease;
-        }
-        .social-card:hover {
-            background: var(--bs-primary);
-            color: white !important;
-            transform: translateY(-5px);
-            border-color: var(--bs-primary);
-        }
-        .social-icon {
-            font-size: 2rem;
-            margin-right: 1.25rem;
-        }
-
-        /* Responsive Fixes */
-        @media (max-width: 768px) {
-            .hero-section { padding: 60px 0; text-align: center; }
-            .section-title { margin-bottom: 2rem; }
-            .timeline { margin-left: 10px; }
-            .cert-slider-card { padding: 1rem !important; }
-            .cert-iframe-container { height: 300px; }
-        }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -283,7 +100,7 @@
                         <span class="skill-badge">TypeScript</span>
                         <span class="skill-badge">Kafka (EDA)</span>
                         <span class="skill-badge">PostgreSQL</span>
-                        <span class="skill-badge">Python (Flask)</span>
+                        <span class="skill-badge">Python</span>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -373,8 +190,8 @@
                 <div class="col-md-6">
                     <div class="card project-card h-100 bg-body-tertiary">
                         <div class="card-body p-4">
-                            <h5 class="fw-bold">AI Data Extraction Suite</h5>
-                            <p class="text-secondary small" data-i18n="proj_2_desc">Automated system for extracting intelligent data from PDFs and images using Python/Flask.</p>
+                            <h5 class="fw-bold">Data Extraction Suite</h5>
+                            <p class="text-secondary small" data-i18n="proj_2_desc">Automated system for extracting intelligent data from PDFs and images using Python.</p>
                             <div class="d-flex gap-2 mb-3">
                                 <span class="badge bg-primary-subtle text-primary">Python</span>
                                 <span class="badge bg-primary-subtle text-primary">GCP</span>
@@ -483,7 +300,7 @@
                                         </div>
                                         <div class="col-md-7 text-md-start">
                                             <h4 class="fw-bold text-primary">Manage Kubernetes in Google Cloud</h4>
-                                            <p class="text-secondary" data-i18n="cert_ops_desc">Manage Kubernetes in Google Cloud</p>
+                                            <p class="text-secondary" data-i18n="cert_ops_manage_k8s_in_gcp">Managing deployments with kubectl, monitoring and debugging applications on Google Kubernetes Engine (GKE), and continuous delivery techniques.</p>
                                             <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/9180488" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
                                         </div>
                                     </div>
@@ -497,7 +314,7 @@
                                         </div>
                                         <div class="col-md-7 text-md-start">
                                             <h4 class="fw-bold text-primary">Monitor and Manage Google Cloud Resources</h4>
-                                            <p class="text-secondary" data-i18n="cert_gcp_essentials_desc">Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.</p>
+                                            <p class="text-secondary" data-i18n="cert_gcp_monitor_and_manage_gcp_resource_desc">Granting and revoking IAM permissions; installing monitoring and logging agents; creating, deploying, and testing an event-driven Cloud Run function.</p>
                                             <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8566277" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
                                         </div>
                                     </div>
@@ -511,7 +328,7 @@
                                         </div>
                                         <div class="col-md-7 text-md-start">
                                             <h4 class="fw-bold text-primary">Build Infrastructure with Terraform on Google Cloud</h4>
-                                            <p class="text-secondary" data-i18n="cert_gcp_essentials_desc">Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.</p>
+                                            <p class="text-secondary" data-i18n="cert_gcp_build_infra_with_terraform_desc">Infrastructure as Code (IaC) principles using Terraform, provisioning and managing Google Cloud resources with Terraform configurations, effective state management (local and remote), and modularizing Terraform code for reusability and organization.</p>
                                             <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8618838" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
                                         </div>
                                     </div>
@@ -525,7 +342,7 @@
                                         </div>
                                         <div class="col-md-7 text-md-start">
                                             <h4 class="fw-bold text-primary">Create and Manage AlloyDB Databases</h4>
-                                            <p class="text-secondary" data-i18n="cert_gcp_essentials_desc">Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.</p>
+                                            <p class="text-secondary" data-i18n="cert_gcp_create_and_manage_alloydb_desc">Performing core AlloyDB operations and tasks, migrating to AlloyDB from PostgreSQL, administering an AlloyDB database, and accelerating analytical queries using the AlloyDB Columnar Engine.</p>
                                             <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8474311" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
                                         </div>
                                     </div>
@@ -578,10 +395,10 @@
         <div class="container">
             <!-- <h2 class="fw-bold text-primary mb-4">ENG.PORTFOLIO</h2> -->
             <div class="d-flex justify-content-center gap-4 mb-4 fs-4">
-                <a href="https://github.com/sonhuynh-se" target="_blank" class="text-white"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/sonhuynh-se/" target="_blank" class="text-white"><i class="bi bi-linkedin"></i></a>
+                <!-- <a href="https://github.com/sonhuynh-se" target="_blank" class="text-white"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/sonhuynh-se/" target="_blank" class="text-white"><i class="bi bi-linkedin"></i></a> -->
             </div>
-            <p class="small text-white-50 mb-0">© 2024 Computer Software Engineer. Built with Logic.</p>
+            <p class="small text-white-50 mb-0">© 2026 Computer Software Engineer. Built with Logic.</p>
         </div>
     </footer>
 
@@ -635,12 +452,14 @@
                 cert_js_desc: "Verified proficiency in JavaScript basics, including variables, functions, and standard logic.",
                 cert_sql_desc: "Confirmed ability to write simple SQL queries and handle relational databases.",
                 cert_py_desc: "Solid understanding of Python fundamentals, data structures, and algorithms.",
-                cert_ops_desc: "Mastery of Kubernetes, GCP infrastructure, and ArgoCD deployments.",
-                cert_gcp_essentials_desc: "Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.",
+                cert_ops_manage_k8s_in_gcp: "Managing deployments with kubectl, monitoring and debugging applications on Google Kubernetes Engine (GKE), and continuous delivery techniques.",
+                cert_gcp_monitor_and_manage_gcp_resource_desc: "Granting and revoking IAM permissions; installing monitoring and logging agents; creating, deploying, and testing an event-driven Cloud Run function.",
                 contact_title: "Let's Connect",
                 contact_desc: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
                 social_linkedin_desc: "Professional Network",
-                social_github_desc: "Code & Projects"
+                social_github_desc: "Code & Projects",
+                cert_gcp_build_infra_with_terraform_desc: "Infrastructure as Code (IaC) principles using Terraform, provisioning and managing Google Cloud resources with Terraform configurations, effective state management (local and remote), and modularizing Terraform code for reusability and organization.",
+                cert_gcp_create_and_manage_alloydb_desc: "Performing core AlloyDB operations and tasks, migrating to AlloyDB from PostgreSQL, administering an AlloyDB database, and accelerating analytical queries using the AlloyDB Columnar Engine."
             },
             vi: {
                 nav_about: "Giới thiệu",
@@ -672,12 +491,14 @@
                 cert_js_desc: "Xác nhận thành thạo các kiến thức cơ bản về JavaScript, bao gồm biến, hàm và logic lập trình.",
                 cert_sql_desc: "Xác nhận khả năng viết các truy vấn SQL cơ bản và xử lý cơ sở dữ liệu quan hệ.",
                 cert_py_desc: "Hiểu biết vững chắc về các kiến thức cơ bản, cấu trúc dữ liệu và thuật toán trong Python.",
-                cert_ops_desc: "Làm chủ Kubernetes, hạ tầng GCP và triển khai ArgoCD.",
-                cert_gcp_essentials_desc: "Chứng minh sự thông thạo các khái niệm nền tảng của Google Cloud, bao gồm máy ảo, mạng và bảo mật.",
+                cert_ops_manage_k8s_in_gcp: "Quản lý triển khai bằng kubectl, giám sát và gỡ lỗi ứng dụng trên Google Kubernetes Engine (GKE), và các kỹ thuật phân phối liên tục.",
+                cert_gcp_monitor_and_manage_gcp_resource_desc: "Cấp và thu hồi quyền IAM; cài đặt các tác nhân giám sát và ghi nhật ký; tạo, triển khai và kiểm thử chức năng Cloud Run dựa trên sự kiện.",
                 contact_title: "Kết nối",
                 contact_desc: "Tôi luôn sẵn sàng thảo luận về các dự án mới, ý tưởng sáng tạo hoặc cơ hội để đồng hành cùng tầm nhìn của bạn.",
                 social_linkedin_desc: "Mạng lưới chuyên nghiệp",
-                social_github_desc: "Mã nguồn & Dự án"
+                social_github_desc: "Mã nguồn & Dự án",
+                cert_gcp_build_infra_with_terraform_desc: "Nguyên tắc Hạ tầng như Mã (IaC) sử dụng Terraform, cung cấp và quản lý tài nguyên Google Cloud với cấu hình Terraform, quản lý trạng thái hiệu quả (cục bộ và từ xa), và mô-đun hóa mã Terraform để tái sử dụng và tổ chức.",
+                cert_gcp_create_and_manage_alloydb_desc: "Thực hiện các thao tác và nhiệm vụ cốt lõi của AlloyDB, di chuyển từ PostgreSQL sang AlloyDB, quản trị cơ sở dữ liệu AlloyDB, và tăng tốc các truy vấn phân tích sử dụng AlloyDB Columnar Engine."
             }
         };
 
