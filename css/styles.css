@@ -180,3 +180,22 @@ body {
     .cert-slider-card { padding: 1rem !important; }
     .cert-iframe-container { height: 300px; }
 }
+
+/* Small screen contact info */
+@media (max-width: 576px) {
+    .hero-section .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 0.75rem !important;
+        text-align: left;
+    }
+    .hero-section .p-3 {
+        padding: 0.75rem !important;
+        width: 100%;
+    }
+    .hero-section .fs-4 {
+        font-size: 1.5rem !important;
+    }
+    .hero-section .fs-4.me-3 {
+        margin-right: 0.75rem !important;
+    }
+}
