@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Engineer Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --transition-speed: 0.3s;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+        }
+
+        /* Custom UI Components */
+        .nav-link { font-weight: 600; cursor: pointer; }
+        
+        .hero-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0) 100%);
+        }
+
+        .section-title {
+            font-weight: 800;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60%;
+            height: 4px;
+            background: var(--bs-primary);
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        /* Skills Tags */
+        .skill-badge {
+            padding: 10px 20px;
+            border-radius: 50px;
+            background: var(--bs-body-tertiary);
+            border: 1px solid var(--bs-border-color);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            background: var(--bs-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Timeline Style */
+        .timeline {
+            border-left: 3px solid var(--bs-primary);
+            padding-left: 30px;
+            margin-left: 15px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: var(--bs-primary);
+            border: 4px solid var(--bs-body-bg);
+            border-radius: 50%;
+            position: absolute;
+            left: -40px;
+            top: 5px;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+        }
+
+        /* Project Cards */
+        .project-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Certificate Slider Styles */
+        .cert-slider-card {
+            max-width: 950px;
+            margin: 0 auto;
+            border-radius: 24px;
+            overflow: hidden;
+            background: var(--bs-body-tertiary);
+            border: 1px solid var(--bs-border-color);
+            transition: all 0.3s ease;
+        }
+
+        .cert-iframe-container {
+            width: 100%;
+            height: 450px;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--bs-border-color);
+        }
+
+        /* Tabs Styling */
+        .nav-pills .nav-link {
+            padding: 12px 30px;
+            border-radius: 50px;
+            color: var(--bs-secondary);
+            font-weight: 700;
+            border: 1px solid transparent;
+        }
+        .nav-pills .nav-link.active {
+            background-color: var(--bs-primary-subtle);
+            color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: var(--bs-primary);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: invert(1) grayscale(100);
+            background-size: 50%;
+        }
+        [data-bs-theme="dark"] .carousel-control-prev-icon,
+        [data-bs-theme="dark"] .carousel-control-next-icon {
+            filter: invert(0);
+        }
+
+        /* Floating Theme Toggle */
+        .theme-toggle-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid var(--bs-border-color);
+            background: var(--bs-body-bg);
+        }
+
+        /* Social Contact Cards */
+        .social-card {
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: var(--bs-body-tertiary);
+            border: 1px solid var(--bs-border-color);
+            transition: all 0.3s ease;
+        }
+        .social-card:hover {
+            background: var(--bs-primary);
+            color: white !important;
+            transform: translateY(-5px);
+            border-color: var(--bs-primary);
+        }
+        .social-icon {
+            font-size: 2rem;
+            margin-right: 1.25rem;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .hero-section { padding: 60px 0; text-align: center; }
+            .section-title { margin-bottom: 2rem; }
+            .timeline { margin-left: 10px; }
+            .cert-slider-card { padding: 1rem !important; }
+            .cert-iframe-container { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">SON HUYNH</a>
+            
+            <div class="d-flex align-items-center order-lg-last gap-2 ms-2">
+                <select class="form-select form-select-sm" id="langSwitcher" style="width: auto;">
+                    <option value="en">EN</option>
+                    <option value="vi">VI</option>
+                </select>
+
+                <div class="theme-toggle-btn" id="themeToggle" title="Toggle Theme">
+                    <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-3">
+                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav_experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certs" data-i18n="nav_certs">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2" data-i18n="hero_badge">Full Stack Engineer</span>
+                    <h1 class="display-3 fw-800 mb-4" data-i18n="hero_title">Engineering Scalable Software Solutions</h1>
+                    <p class="lead text-secondary mb-4" data-i18n="hero_desc">Specializing in microservices, event-driven architectures (Kafka), and cloud-native deployments. I bridge complex back-end logic with intuitive front-end experiences.</p>
+                    
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="p-3 border rounded-3 bg-body shadow-sm d-flex align-items-center">
+                            <i class="bi bi-envelope-at text-primary fs-4 me-3"></i>
+                            <div>
+                                <p class="mb-0 x-small text-muted">Email</p>
+                                <span class="fw-bold">sonhuynh.se@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="p-3 border rounded-3 bg-body shadow-sm d-flex align-items-center">
+                            <i class="bi bi-geo-alt text-primary fs-4 me-3"></i>
+                            <div>
+                                <p class="mb-0 x-small text-muted" data-i18n="location_label">Location</p>
+                                <span class="fw-bold" data-i18n="location_val">Ho Chi Minh City, VN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=600&h=600&fit=crop" class="img-fluid rounded-4 shadow-lg" alt="Dev Setup">
+                        <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-4 m-n3 shadow">
+                            <h4 class="mb-0 fw-bold">7+</h4>
+                            <small data-i18n="years_exp">Years Professional Exp</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-body-tertiary">
+        <div class="container py-lg-5">
+            <h2 class="section-title" data-i18n="skills_title">Technical Stack</h2>
+            <div class="row g-4 mt-2">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4">Core Tech</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge">Nest.js</span>
+                        <span class="skill-badge">Next.js</span>
+                        <span class="skill-badge">TypeScript</span>
+                        <span class="skill-badge">Kafka (EDA)</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">Python (Flask)</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4">DevOps & Cloud</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge">GCP</span>
+                        <span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge">Docker Swarm</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">ArgoCD (GitOps)</span>
+                        <span class="skill-badge">GitLab CI</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4">Testing & QA</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-badge">Jest (Unit)</span>
+                        <span class="skill-badge">Cypress (E2E)</span>
+                        <span class="skill-badge">Playwright</span>
+                        <span class="skill-badge">SonarQube</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience" class="py-5">
+        <div class="container py-lg-5">
+            <h2 class="section-title" data-i18n="exp_title">Experience</h2>
+            <div class="timeline mt-5">
+                <div class="timeline-item">
+                    <h4 class="fw-bold">Full Stack Engineer @ CyberLogitec</h4>
+                    <span class="text-primary fw-bold">Nov 2022 - Present</span>
+                    <p class="mt-2 text-secondary" data-i18n="exp_1_desc">Designing scalable microservices using Nest.js and Next.js. Implemented Event-Driven Architecture (EDA) with Kafka. Managing deployments on GCP using Kubernetes and ArgoCD.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="fw-bold">Full Stack Engineer @ CyberLogitec</h4>
+                    <span class="text-primary fw-bold">Jun 2019 - Oct 2022</span>
+                    <p class="mt-2 text-secondary" data-i18n="exp_2_desc">Built multi-tiered applications using Python (Flask) and Node.js. Automated manual data extraction from PDFs/images, boosting productivity via containerized Docker Swarm infrastructure.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="fw-bold">Full Stack Engineer (Part-time) @ VDAT Lab</h4>
+                    <span class="text-primary fw-bold">Jul 2018 - May 2022</span>
+                    <p class="mt-2 text-secondary" data-i18n="exp_3_desc">Developed mobile features and front-end web applications using Ionic Framework and modern web technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-body-tertiary">
+        <div class="container py-lg-5">
+            <h2 class="section-title" data-i18n="edu_title">Education</h2>
+            <div class="card border-0 shadow-sm p-4 rounded-4">
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary-subtle p-3 rounded-3 me-4">
+                        <i class="bi bi-mortarboard-fill text-primary fs-3"></i>
+                    </div>
+                    <div>
+                        <h4 class="fw-bold mb-1">Industrial University of Ho Chi Minh City</h4>
+                        <p class="mb-0 text-secondary" data-i18n="edu_degree">Engineer's degree, Computer Software Engineering (2015 - 2021)</p>
+                        <span class="badge bg-success-subtle text-success mt-2" data-i18n="edu_grade">Grade: Good</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-5">
+        <div class="container py-lg-5">
+            <h2 class="section-title" data-i18n="projects_title">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card project-card h-100 bg-body-tertiary">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold">Event-Driven Logistics Platform</h5>
+                            <p class="text-secondary small" data-i18n="proj_1_desc">A microservices architecture built with Nest.js and Kafka to handle high-throughput logistics data.</p>
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-primary-subtle text-primary">Kafka</span>
+                                <span class="badge bg-primary-subtle text-primary">K8s</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card project-card h-100 bg-body-tertiary">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold">AI Data Extraction Suite</h5>
+                            <p class="text-secondary small" data-i18n="proj_2_desc">Automated system for extracting intelligent data from PDFs and images using Python/Flask.</p>
+                            <div class="d-flex gap-2 mb-3">
+                                <span class="badge bg-primary-subtle text-primary">Python</span>
+                                <span class="badge bg-primary-subtle text-primary">GCP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Slider -->
+    <section id="certs" class="py-5 bg-body-tertiary">
+        <div class="container py-lg-5 text-center">
+            <h2 class="section-title" data-i18n="certs_title">Certifications</h2>
+            
+            <ul class="nav nav-pills justify-content-center mb-5 gap-3" id="certTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="dev-tab" data-bs-toggle="pill" data-bs-target="#dev-pane" type="button" role="tab" data-i18n="tab_dev">Development</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="ops-tab" data-bs-toggle="pill" data-bs-target="#ops-pane" type="button" role="tab" data-i18n="tab_ops">Ops & Cloud</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="certTabContent">
+                <div class="tab-pane fade show active" id="dev-pane" role="tabpanel">
+                    <div id="devCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#devCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#devCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#devCarousel" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner pb-5">
+                            <div class="carousel-item active">
+                                <div class="cert-slider-card p-4 shadow-sm">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-7 mb-3 mb-md-0">
+                                            <div class="cert-iframe-container shadow-sm">
+                                                <img src="./images/js-basic.png" width="100%" height="100%">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 text-md-start">
+                                            <h4 class="fw-bold text-primary">JavaScript (Basic)</h4>
+                                            <p class="text-secondary" data-i18n="cert_js_desc">Verified proficiency in JavaScript basics, including variables, functions, and standard logic.</p>
+                                            <a href="https://www.hackerrank.com/certificates/23c690e21250" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Original</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="cert-slider-card p-4 shadow-sm">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-7 mb-3 mb-md-0">
+                                            <div class="cert-iframe-container shadow-sm">
+                                                <img src="./images/sql-basic.png" width="100%" height="100%">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 text-md-start">
+                                            <h4 class="fw-bold text-primary">SQL (Basic)</h4>
+                                            <p class="text-secondary" data-i18n="cert_sql_desc">Confirmed ability to write simple SQL queries and handle relational databases.</p>
+                                            <a href="https://www.hackerrank.com/certificates/e5bdf1b2091b" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Original</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="cert-slider-card p-4 shadow-sm">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-7 mb-3 mb-md-0">
+                                            <div class="cert-iframe-container shadow-sm">
+                                                <img src="./images/python-basic.png" width="100%" height="100%">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 text-md-start">
+                                            <h4 class="fw-bold text-primary">Python (Basic)</h4>
+                                            <p class="text-secondary" data-i18n="cert_py_desc">Solid understanding of Python fundamentals, data structures, and algorithms.</p>
+                                            <a href="https://www.hackerrank.com/certificates/10a73b887dec" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Original</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#devCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#devCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="ops-pane" role="tabpanel">
+                    <div id="opsCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="3"></button>
+                        </div>
+                        <div class="carousel-inner pb-5">
+                            <div class="carousel-item active">
+                                <div class="cert-slider-card p-4 shadow-sm">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5 mb-3">
+                                             <img src="./images/manage-kube.png" class="img-fluid rounded-3" alt="Manage Kubernetes in Google Cloud">
+                                        </div>
+                                        <div class="col-md-7 text-md-start">
+                                            <h4 class="fw-bold text-primary">Manage Kubernetes in Google Cloud</h4>
+                                            <p class="text-secondary" data-i18n="cert_ops_desc">Manage Kubernetes in Google Cloud</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/9180488" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="cert-slider-card p-4 shadow-sm">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5 mb-3">
+                                            <img src="./images/monitor-and-manage-gcp-resource.png" class="img-fluid rounded-3" alt="Google Cloud Badge">
+                                        </div>
+                                        <div class="col-md-7 text-md-start">
+                                            <h4 class="fw-bold text-primary">Monitor and Manage Google Cloud Resources</h4>
+                                            <p class="text-secondary" data-i18n="cert_gcp_essentials_desc">Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8566277" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="cert-slider-card p-4 shadow-sm">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5 mb-3">
+                                            <img src="./images/build-infra-w-tr.png" class="img-fluid rounded-3" alt="Google Cloud Badge">
+                                        </div>
+                                        <div class="col-md-7 text-md-start">
+                                            <h4 class="fw-bold text-primary">Build Infrastructure with Terraform on Google Cloud</h4>
+                                            <p class="text-secondary" data-i18n="cert_gcp_essentials_desc">Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8618838" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="cert-slider-card p-4 shadow-sm">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5 mb-3">
+                                            <img src="./images/create-and-manage-alloydb.png" class="img-fluid rounded-3" alt="Google Cloud Badge">
+                                        </div>
+                                        <div class="col-md-7 text-md-start">
+                                            <h4 class="fw-bold text-primary">Create and Manage AlloyDB Databases</h4>
+                                            <p class="text-secondary" data-i18n="cert_gcp_essentials_desc">Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8474311" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#opsCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#opsCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-lg-5 text-center">
+            <h2 class="section-title" data-i18n="contact_title">Let's Connect</h2>
+            <p class="text-secondary mb-5" data-i18n="contact_desc">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+            
+            <div class="row justify-content-center g-4">
+                <div class="col-md-5 col-lg-4">
+                    <a href="https://www.linkedin.com/in/sonhuynh-se/" target="_blank" class="social-card shadow-sm">
+                        <i class="bi bi-linkedin social-icon"></i>
+                        <div class="text-start">
+                            <h5 class="mb-0 fw-bold">LinkedIn</h5>
+                            <small class="opacity-75" data-i18n="social_linkedin_desc">Professional Network</small>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <a href="https://github.com/sonhuynh-se" target="_blank" class="social-card shadow-sm">
+                        <i class="bi bi-github social-icon"></i>
+                        <div class="text-start">
+                            <h5 class="mb-0 fw-bold">GitHub</h5>
+                            <small class="opacity-75" data-i18n="social_github_desc">Code & Projects</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white text-center border-top border-secondary">
+        <div class="container">
+            <!-- <h2 class="fw-bold text-primary mb-4">ENG.PORTFOLIO</h2> -->
+            <div class="d-flex justify-content-center gap-4 mb-4 fs-4">
+                <a href="https://github.com/sonhuynh-se" target="_blank" class="text-white"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/sonhuynh-se/" target="_blank" class="text-white"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <p class="small text-white-50 mb-0">© 2024 Computer Software Engineer. Built with Logic.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            themeIcon.className = newTheme === 'light' ? 'bi bi-moon-stars-fill' : 'bi bi-sun-fill';
+            localStorage.setItem('theme', newTheme);
+        });
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-bs-theme', savedTheme);
+
+        const translations = {
+            en: {
+                nav_about: "About",
+                nav_skills: "Skills",
+                nav_experience: "Experience",
+                nav_projects: "Projects",
+                nav_certs: "Certifications",
+                nav_contact: "Contact",
+                hero_badge: "Full Stack Engineer",
+                hero_title: "Engineering Scalable Software Solutions",
+                hero_desc: "Specializing in microservices, event-driven architectures (Kafka), and cloud-native deployments. I bridge complex back-end logic with intuitive front-end experiences.",
+                location_label: "Location",
+                location_val: "Ho Chi Minh City, VN",
+                years_exp: "Years Professional Exp",
+                skills_title: "Technical Stack",
+                exp_title: "Professional Experience",
+                exp_1_desc: "Designing scalable microservices using Nest.js and Next.js. Implemented EDA with Kafka. Managing GCP/Kubernetes deployments.",
+                exp_2_desc: "Built multi-tiered apps (Python/Node). Automated manual data extraction, boosting productivity via Docker Swarm infrastructure.",
+                exp_3_desc: "Developed mobile and web features using Ionic Framework and modern front-end technologies.",
+                edu_title: "Education",
+                edu_degree: "Engineer's degree, Computer Software Engineering (2015 - 2021)",
+                edu_grade: "Grade: Good",
+                projects_title: "Impactful Projects",
+                proj_1_desc: "A microservices architecture built with Nest.js and Kafka to handle high-throughput logistics data.",
+                proj_2_desc: "Automated system for extracting intelligent data from PDFs and images using Python/Flask.",
+                tab_dev: "Development",
+                tab_ops: "Ops & Cloud",
+                certs_title: "Certifications",
+                cert_js_desc: "Verified proficiency in JavaScript basics, including variables, functions, and standard logic.",
+                cert_sql_desc: "Confirmed ability to write simple SQL queries and handle relational databases.",
+                cert_py_desc: "Solid understanding of Python fundamentals, data structures, and algorithms.",
+                cert_ops_desc: "Mastery of Kubernetes, GCP infrastructure, and ArgoCD deployments.",
+                cert_gcp_essentials_desc: "Demonstrated proficiency in foundational Google Cloud concepts, including virtual machines, networking, and security.",
+                contact_title: "Let's Connect",
+                contact_desc: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+                social_linkedin_desc: "Professional Network",
+                social_github_desc: "Code & Projects"
+            },
+            vi: {
+                nav_about: "Giới thiệu",
+                nav_skills: "Kỹ năng",
+                nav_experience: "Kinh nghiệm",
+                nav_projects: "Dự án",
+                nav_certs: "Chứng chỉ",
+                nav_contact: "Liên hệ",
+                hero_badge: "Kỹ sư Full Stack",
+                hero_title: "Xây dựng Giải pháp Phần mềm Mở rộng",
+                hero_desc: "Chuyên về microservices, kiến trúc hướng sự kiện (Kafka) và triển khai đám mây. Tôi kết nối logic back-end phức tạp với trải nghiệm front-end trực quan.",
+                location_label: "Vị trí",
+                location_val: "TP. Hồ Chí Minh, VN",
+                years_exp: "Năm kinh nghiệm chuyên môn",
+                skills_title: "Kỹ năng Chuyên môn",
+                exp_title: "Kinh nghiệm Làm việc",
+                exp_1_desc: "Thiết kế microservices mở rộng bằng Nest.js và Next.js. Triển khai EDA với Kafka. Quản lý vận hành trên GCP và Kubernetes.",
+                exp_2_desc: "Xây dựng ứng dụng đa tầng (Python/Node). Tự động hóa trích xuất dữ liệu, tăng năng suất qua hạ tầng Docker Swarm.",
+                exp_3_desc: "Phát triển các tính năng di động và ứng dụng web sử dụng Ionic Framework và công nghệ web hiện đại.",
+                edu_title: "Học vấn",
+                edu_degree: "Kỹ sư Kỹ thuật Phần mềm (2015 - 2021)",
+                edu_grade: "Xếp loại: Khá",
+                projects_title: "Dự án Tiêu biểu",
+                proj_1_desc: "Kiến trúc microservices xây dựng bằng Nest.js và Kafka để xử lý dữ liệu logistics lưu lượng lớn.",
+                proj_2_desc: "Hệ thống tự động trích xuất dữ liệu thông minh từ PDF và hình ảnh bằng Python/Flask.",
+                tab_dev: "Lập trình",
+                tab_ops: "Vận hành & Đám mây",
+                certs_title: "Chứng chỉ",
+                cert_js_desc: "Xác nhận thành thạo các kiến thức cơ bản về JavaScript, bao gồm biến, hàm và logic lập trình.",
+                cert_sql_desc: "Xác nhận khả năng viết các truy vấn SQL cơ bản và xử lý cơ sở dữ liệu quan hệ.",
+                cert_py_desc: "Hiểu biết vững chắc về các kiến thức cơ bản, cấu trúc dữ liệu và thuật toán trong Python.",
+                cert_ops_desc: "Làm chủ Kubernetes, hạ tầng GCP và triển khai ArgoCD.",
+                cert_gcp_essentials_desc: "Chứng minh sự thông thạo các khái niệm nền tảng của Google Cloud, bao gồm máy ảo, mạng và bảo mật.",
+                contact_title: "Kết nối",
+                contact_desc: "Tôi luôn sẵn sàng thảo luận về các dự án mới, ý tưởng sáng tạo hoặc cơ hội để đồng hành cùng tầm nhìn của bạn.",
+                social_linkedin_desc: "Mạng lưới chuyên nghiệp",
+                social_github_desc: "Mã nguồn & Dự án"
+            }
+        };
+
+        const langSwitcher = document.getElementById('langSwitcher');
+        function updateLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) element.textContent = translations[lang][key];
+            });
+            htmlElement.setAttribute('lang', lang);
+            localStorage.setItem('lang', lang);
+        }
+
+        langSwitcher.addEventListener('change', (e) => updateLanguage(e.target.value));
+        const savedLang = localStorage.getItem('lang') || 'en';
+        langSwitcher.value = savedLang;
+        updateLanguage(savedLang);
+    </script>
+</body>
+</html>
