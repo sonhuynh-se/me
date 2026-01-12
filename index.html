@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Son Huynh - Full Stack Engineer</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap 5.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="./css/styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-91JSD2B73H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-91JSD2B73H');
+    </script>
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary" href="#">SON HUYNH</a>
-            
+
             <div class="d-flex align-items-center order-lg-last gap-2 ms-2">
                 <select class="form-select form-select-sm" id="langSwitcher" style="width: auto;">
                     <option value="en">EN</option>
@@ -34,12 +46,13 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto me-3">
                     <li class="nav-item"><a class="nav-link" href="#about" data-i18n="nav_about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav_experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"
+                            data-i18n="nav_experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav_projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certs" data-i18n="nav_certs">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
@@ -53,10 +66,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
-                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2" data-i18n="hero_badge">Full Stack Engineer</span>
-                    <h1 class="display-3 fw-800 mb-4" data-i18n="hero_title">Engineering Scalable Software Solutions</h1>
-                    <p class="lead text-secondary mb-4" data-i18n="hero_desc">Specializing in microservices, event-driven architectures (Kafka), and cloud-native deployments. I bridge complex back-end logic with intuitive front-end experiences.</p>
-                    
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2" data-i18n="hero_badge">Full Stack
+                        Engineer</span>
+                    <h1 class="display-3 fw-800 mb-4" data-i18n="hero_title">Engineering Scalable Software Solutions
+                    </h1>
+                    <p class="lead text-secondary mb-4" data-i18n="hero_desc">Specializing in microservices,
+                        event-driven architectures (Kafka), and cloud-native deployments. I bridge complex back-end
+                        logic with intuitive front-end experiences.</p>
+
                     <div class="d-flex flex-wrap gap-3">
                         <div class="p-3 border rounded-3 bg-body shadow-sm d-flex align-items-center">
                             <i class="bi bi-envelope-at text-primary fs-4 me-3"></i>
@@ -76,7 +93,8 @@
                 </div>
                 <div class="col-lg-5 d-none d-lg-block">
                     <div class="position-relative">
-                        <img src="https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=600&h=600&fit=crop" class="img-fluid rounded-4 shadow-lg" alt="Dev Setup">
+                        <img src="https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=600&h=600&fit=crop"
+                            class="img-fluid rounded-4 shadow-lg" alt="Dev Setup">
                         <div class="position-absolute bottom-0 start-0 bg-primary text-white p-3 rounded-4 m-n3 shadow">
                             <h4 class="mb-0 fw-bold">7+</h4>
                             <small data-i18n="years_exp">Years Professional Exp</small>
@@ -136,17 +154,22 @@
                 <div class="timeline-item">
                     <h4 class="fw-bold">Full Stack Engineer @ CyberLogitec</h4>
                     <span class="text-primary fw-bold">Nov 2022 - Present</span>
-                    <p class="mt-2 text-secondary" data-i18n="exp_1_desc">Designing scalable microservices using Nest.js and Next.js. Implemented Event-Driven Architecture (EDA) with Kafka. Managing deployments on GCP using Kubernetes and ArgoCD.</p>
+                    <p class="mt-2 text-secondary" data-i18n="exp_1_desc">Designing scalable microservices using Nest.js
+                        and Next.js. Implemented Event-Driven Architecture (EDA) with Kafka. Managing deployments on GCP
+                        using Kubernetes and ArgoCD.</p>
                 </div>
                 <div class="timeline-item">
                     <h4 class="fw-bold">Full Stack Engineer @ CyberLogitec</h4>
                     <span class="text-primary fw-bold">Jun 2019 - Oct 2022</span>
-                    <p class="mt-2 text-secondary" data-i18n="exp_2_desc">Built multi-tiered applications using Python (Flask) and Node.js. Automated manual data extraction from PDFs/images, boosting productivity via containerized Docker Swarm infrastructure.</p>
+                    <p class="mt-2 text-secondary" data-i18n="exp_2_desc">Built multi-tiered applications using Python
+                        (Flask) and Node.js. Automated manual data extraction from PDFs/images, boosting productivity
+                        via containerized Docker Swarm infrastructure.</p>
                 </div>
                 <div class="timeline-item">
                     <h4 class="fw-bold">Full Stack Engineer (Part-time) @ VDAT Lab</h4>
                     <span class="text-primary fw-bold">Jul 2018 - May 2022</span>
-                    <p class="mt-2 text-secondary" data-i18n="exp_3_desc">Developed mobile features and front-end web applications using Ionic Framework and modern web technologies.</p>
+                    <p class="mt-2 text-secondary" data-i18n="exp_3_desc">Developed mobile features and front-end web
+                        applications using Ionic Framework and modern web technologies.</p>
                 </div>
             </div>
         </div>
@@ -163,7 +186,8 @@
                     </div>
                     <div>
                         <h4 class="fw-bold mb-1">Industrial University of Ho Chi Minh City</h4>
-                        <p class="mb-0 text-secondary" data-i18n="edu_degree">Engineer's degree, Computer Software Engineering (2015 - 2021)</p>
+                        <p class="mb-0 text-secondary" data-i18n="edu_degree">Engineer's degree, Computer Software
+                            Engineering (2015 - 2021)</p>
                         <span class="badge bg-success-subtle text-success mt-2" data-i18n="edu_grade">Grade: Good</span>
                     </div>
                 </div>
@@ -180,7 +204,8 @@
                     <div class="card project-card h-100 bg-body-tertiary">
                         <div class="card-body p-4">
                             <h5 class="fw-bold">Event-Driven Logistics Platform</h5>
-                            <p class="text-secondary small" data-i18n="proj_1_desc">A microservices architecture built with Nest.js and Kafka to handle high-throughput logistics data.</p>
+                            <p class="text-secondary small" data-i18n="proj_1_desc">A microservices architecture built
+                                with Nest.js and Kafka to handle high-throughput logistics data.</p>
                             <div class="d-flex gap-2 mb-3">
                                 <span class="badge bg-primary-subtle text-primary">Kafka</span>
                                 <span class="badge bg-primary-subtle text-primary">K8s</span>
@@ -192,7 +217,8 @@
                     <div class="card project-card h-100 bg-body-tertiary">
                         <div class="card-body p-4">
                             <h5 class="fw-bold">Data Extraction Suite</h5>
-                            <p class="text-secondary small" data-i18n="proj_2_desc">Automated system for extracting intelligent data from PDFs and images using Python.</p>
+                            <p class="text-secondary small" data-i18n="proj_2_desc">Automated system for extracting
+                                intelligent data from PDFs and images using Python.</p>
                             <div class="d-flex gap-2 mb-3">
                                 <span class="badge bg-primary-subtle text-primary">Python</span>
                                 <span class="badge bg-primary-subtle text-primary">GCP</span>
@@ -208,13 +234,15 @@
     <section id="certs" class="py-5 bg-body-tertiary">
         <div class="container py-lg-5 text-center">
             <h2 class="section-title" data-i18n="certs_title">Certifications</h2>
-            
+
             <ul class="nav nav-pills justify-content-center mb-5 gap-3" id="certTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="dev-tab" data-bs-toggle="pill" data-bs-target="#dev-pane" type="button" role="tab" data-i18n="tab_dev">Development</button>
+                    <button class="nav-link active" id="dev-tab" data-bs-toggle="pill" data-bs-target="#dev-pane"
+                        type="button" role="tab" data-i18n="tab_dev">Development</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="ops-tab" data-bs-toggle="pill" data-bs-target="#ops-pane" type="button" role="tab" data-i18n="tab_ops">Ops & Cloud</button>
+                    <button class="nav-link" id="ops-tab" data-bs-toggle="pill" data-bs-target="#ops-pane" type="button"
+                        role="tab" data-i18n="tab_ops">Ops & Cloud</button>
                 </li>
             </ul>
 
@@ -222,7 +250,8 @@
                 <div class="tab-pane fade show active" id="dev-pane" role="tabpanel">
                     <div id="devCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#devCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#devCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#devCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#devCarousel" data-bs-slide-to="2"></button>
                         </div>
@@ -237,8 +266,13 @@
                                         </div>
                                         <div class="col-md-5 text-md-start">
                                             <h4 class="fw-bold text-primary">JavaScript (Basic)</h4>
-                                            <p class="text-secondary" data-i18n="cert_js_desc">Verified proficiency in JavaScript basics, including variables, functions, and standard logic.</p>
-                                            <a href="https://www.hackerrank.com/certificates/23c690e21250" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Original</a>
+                                            <p class="text-secondary" data-i18n="cert_js_desc">Verified proficiency in
+                                                JavaScript basics, including variables, functions, and standard logic.
+                                            </p>
+                                            <a href="https://www.hackerrank.com/certificates/23c690e21250"
+                                                target="_blank"
+                                                class="btn btn-sm btn-outline-primary rounded-pill mt-2">View
+                                                Original</a>
                                         </div>
                                     </div>
                                 </div>
@@ -253,8 +287,12 @@
                                         </div>
                                         <div class="col-md-5 text-md-start">
                                             <h4 class="fw-bold text-primary">SQL (Basic)</h4>
-                                            <p class="text-secondary" data-i18n="cert_sql_desc">Confirmed ability to write simple SQL queries and handle relational databases.</p>
-                                            <a href="https://www.hackerrank.com/certificates/e5bdf1b2091b" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Original</a>
+                                            <p class="text-secondary" data-i18n="cert_sql_desc">Confirmed ability to
+                                                write simple SQL queries and handle relational databases.</p>
+                                            <a href="https://www.hackerrank.com/certificates/e5bdf1b2091b"
+                                                target="_blank"
+                                                class="btn btn-sm btn-outline-primary rounded-pill mt-2">View
+                                                Original</a>
                                         </div>
                                     </div>
                                 </div>
@@ -269,17 +307,23 @@
                                         </div>
                                         <div class="col-md-5 text-md-start">
                                             <h4 class="fw-bold text-primary">Python (Basic)</h4>
-                                            <p class="text-secondary" data-i18n="cert_py_desc">Solid understanding of Python fundamentals, data structures, and algorithms.</p>
-                                            <a href="https://www.hackerrank.com/certificates/10a73b887dec" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Original</a>
+                                            <p class="text-secondary" data-i18n="cert_py_desc">Solid understanding of
+                                                Python fundamentals, data structures, and algorithms.</p>
+                                            <a href="https://www.hackerrank.com/certificates/10a73b887dec"
+                                                target="_blank"
+                                                class="btn btn-sm btn-outline-primary rounded-pill mt-2">View
+                                                Original</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#devCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#devCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#devCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#devCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
@@ -287,7 +331,8 @@
                 <div class="tab-pane fade" id="ops-pane" role="tabpanel">
                     <div id="opsCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="2"></button>
                             <button type="button" data-bs-target="#opsCarousel" data-bs-slide-to="3"></button>
@@ -297,12 +342,18 @@
                                 <div class="cert-slider-card p-4 shadow-sm">
                                     <div class="row align-items-center">
                                         <div class="col-md-5 mb-3">
-                                             <img src="./images/manage-kube.png" class="img-fluid rounded-3" alt="Manage Kubernetes in Google Cloud">
+                                            <img src="./images/manage-kube.png" class="img-fluid rounded-3"
+                                                alt="Manage Kubernetes in Google Cloud">
                                         </div>
                                         <div class="col-md-7 text-md-start">
                                             <h4 class="fw-bold text-primary">Manage Kubernetes in Google Cloud</h4>
-                                            <p class="text-secondary" data-i18n="cert_ops_manage_k8s_in_gcp">Managing deployments with kubectl, monitoring and debugging applications on Google Kubernetes Engine (GKE), and continuous delivery techniques.</p>
-                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/9180488" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                            <p class="text-secondary" data-i18n="cert_ops_manage_k8s_in_gcp">Managing
+                                                deployments with kubectl, monitoring and debugging applications on
+                                                Google Kubernetes Engine (GKE), and continuous delivery techniques.</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/9180488"
+                                                target="_blank"
+                                                class="btn btn-sm btn-outline-primary rounded-pill mt-2">View
+                                                Profile</a>
                                         </div>
                                     </div>
                                 </div>
@@ -311,12 +362,20 @@
                                 <div class="cert-slider-card p-4 shadow-sm">
                                     <div class="row align-items-center">
                                         <div class="col-md-5 mb-3">
-                                            <img src="./images/monitor-and-manage-gcp-resource.png" class="img-fluid rounded-3" alt="Google Cloud Badge">
+                                            <img src="./images/monitor-and-manage-gcp-resource.png"
+                                                class="img-fluid rounded-3" alt="Google Cloud Badge">
                                         </div>
                                         <div class="col-md-7 text-md-start">
-                                            <h4 class="fw-bold text-primary">Monitor and Manage Google Cloud Resources</h4>
-                                            <p class="text-secondary" data-i18n="cert_gcp_monitor_and_manage_gcp_resource_desc">Granting and revoking IAM permissions; installing monitoring and logging agents; creating, deploying, and testing an event-driven Cloud Run function.</p>
-                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8566277" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                            <h4 class="fw-bold text-primary">Monitor and Manage Google Cloud Resources
+                                            </h4>
+                                            <p class="text-secondary"
+                                                data-i18n="cert_gcp_monitor_and_manage_gcp_resource_desc">Granting and
+                                                revoking IAM permissions; installing monitoring and logging agents;
+                                                creating, deploying, and testing an event-driven Cloud Run function.</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8566277"
+                                                target="_blank"
+                                                class="btn btn-sm btn-outline-primary rounded-pill mt-2">View
+                                                Profile</a>
                                         </div>
                                     </div>
                                 </div>
@@ -325,12 +384,22 @@
                                 <div class="cert-slider-card p-4 shadow-sm">
                                     <div class="row align-items-center">
                                         <div class="col-md-5 mb-3">
-                                            <img src="./images/build-infra-w-tr.png" class="img-fluid rounded-3" alt="Google Cloud Badge">
+                                            <img src="./images/build-infra-w-tr.png" class="img-fluid rounded-3"
+                                                alt="Google Cloud Badge">
                                         </div>
                                         <div class="col-md-7 text-md-start">
-                                            <h4 class="fw-bold text-primary">Build Infrastructure with Terraform on Google Cloud</h4>
-                                            <p class="text-secondary" data-i18n="cert_gcp_build_infra_with_terraform_desc">Infrastructure as Code (IaC) principles using Terraform, provisioning and managing Google Cloud resources with Terraform configurations, effective state management (local and remote), and modularizing Terraform code for reusability and organization.</p>
-                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8618838" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                            <h4 class="fw-bold text-primary">Build Infrastructure with Terraform on
+                                                Google Cloud</h4>
+                                            <p class="text-secondary"
+                                                data-i18n="cert_gcp_build_infra_with_terraform_desc">Infrastructure as
+                                                Code (IaC) principles using Terraform, provisioning and managing Google
+                                                Cloud resources with Terraform configurations, effective state
+                                                management (local and remote), and modularizing Terraform code for
+                                                reusability and organization.</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8618838"
+                                                target="_blank"
+                                                class="btn btn-sm btn-outline-primary rounded-pill mt-2">View
+                                                Profile</a>
                                         </div>
                                     </div>
                                 </div>
@@ -339,21 +408,31 @@
                                 <div class="cert-slider-card p-4 shadow-sm">
                                     <div class="row align-items-center">
                                         <div class="col-md-5 mb-3">
-                                            <img src="./images/create-and-manage-alloydb.png" class="img-fluid rounded-3" alt="Google Cloud Badge">
+                                            <img src="./images/create-and-manage-alloydb.png"
+                                                class="img-fluid rounded-3" alt="Google Cloud Badge">
                                         </div>
                                         <div class="col-md-7 text-md-start">
                                             <h4 class="fw-bold text-primary">Create and Manage AlloyDB Databases</h4>
-                                            <p class="text-secondary" data-i18n="cert_gcp_create_and_manage_alloydb_desc">Performing core AlloyDB operations and tasks, migrating to AlloyDB from PostgreSQL, administering an AlloyDB database, and accelerating analytical queries using the AlloyDB Columnar Engine.</p>
-                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8474311" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill mt-2">View Profile</a>
+                                            <p class="text-secondary"
+                                                data-i18n="cert_gcp_create_and_manage_alloydb_desc">Performing core
+                                                AlloyDB operations and tasks, migrating to AlloyDB from PostgreSQL,
+                                                administering an AlloyDB database, and accelerating analytical queries
+                                                using the AlloyDB Columnar Engine.</p>
+                                            <a href="https://www.skills.google/public_profiles/cc34cb2d-5207-47de-8434-5f61f9344a04/badges/8474311"
+                                                target="_blank"
+                                                class="btn btn-sm btn-outline-primary rounded-pill mt-2">View
+                                                Profile</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#opsCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#opsCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#opsCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#opsCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
@@ -366,8 +445,9 @@
     <section id="contact" class="py-5">
         <div class="container py-lg-5 text-center">
             <h2 class="section-title" data-i18n="contact_title">Let's Connect</h2>
-            <p class="text-secondary mb-5" data-i18n="contact_desc">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-            
+            <p class="text-secondary mb-5" data-i18n="contact_desc">I'm always open to discussing new projects, creative
+                ideas, or opportunities to be part of your visions.</p>
+
             <div class="row justify-content-center g-4">
                 <div class="col-md-5 col-lg-4">
                     <a href="https://www.linkedin.com/in/sonhuynh-se/" target="_blank" class="social-card shadow-sm">
@@ -405,7 +485,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <script>
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
@@ -519,4 +599,5 @@
         updateLanguage(savedLang);
     </script>
 </body>
+
 </html>
